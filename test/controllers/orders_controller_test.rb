@@ -11,7 +11,7 @@ class OrdersControllerTest < ActionController::TestCase
     assert_not_nil assigns(:orders)
   end
 
-  test "requires item in cart" do
+  test "require items in cart" do
     get :new
     assert_redirected_to store_path
     assert_equal flash[:notice], 'Your cart is empty'
